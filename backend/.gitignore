@@ -1,0 +1,11 @@
+appwrite.json
+functions/proxy/.appwrite
+functions/proxy/node_modules
+functions/proxy/package-lock.json
+functions/proxy/.env
+functions/proxy/src/config/
+functions/api_batch/.appwrite
+functions/api_batch/node_modules
+functions/api_batch/package-lock.json
+functions/api_batch/.env
+functions/api_batch/src/config/

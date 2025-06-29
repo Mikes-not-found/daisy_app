@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Modal, TextInput, TouchableOpacity } from 'react-native';
 import { RowCategory, MoneyTrackerItem } from '../interfaces/moneyTrackerInterfaces';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@expo/vector-icons/Ionicons';
 import { formatDateToISO, isFieldValid } from '../utils/utils';
 import { useTheme } from './ThemeContext';
 

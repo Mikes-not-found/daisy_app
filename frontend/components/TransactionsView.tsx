@@ -3,8 +3,8 @@ import React, { useEffect, useState, useMemo, useCallback } from 'react'
 import { goCardlessService } from '../services/goCardlessService';
 import { useUser } from '../auth/UserContext';
 import { useTheme } from './ThemeContext';
-import Icon from 'react-native-vector-icons/Ionicons';
-import DatePicker from 'react-native-date-picker';
+import Icon from '@expo/vector-icons/Ionicons';
+import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 import { getFormattedDateYYYYMMDD } from '../utils/utils';
 import { debounce } from 'lodash';
 import LoadingOverlay from './LoadingOverlay';
@@ -610,8 +610,8 @@ const TransactionsView = () => {
             </View>
 
             {/* Date Picker */}
-            <View className="w-full flex items-center justify-center">
-              <DatePicker
+            {/* <View className="w-full flex items-center justify-center">
+              <DateTimePickerAndroid
                 date={datePickerState.showStartPicker ? datePickerState.startDate : datePickerState.endDate}
                 onDateChange={(date) => {
                   setDatePickerState(prev => ({
@@ -631,7 +631,7 @@ const TransactionsView = () => {
                 }}
                 theme={isDarkMode ? 'dark' : 'light'}
               />
-            </View>
+            </View> */}
 
             {/* Action Buttons */}
             <View className="flex-row justify-between space-x-2">

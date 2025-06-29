@@ -5,7 +5,7 @@ import { useTheme } from './ThemeContext';
 import { MoneyTrackerItem, RowCategory } from '../interfaces/moneyTrackerInterfaces';
 import LoadingOverlay from './LoadingOverlay';
 import AddEditMoneyTrackerItem from './AddEditMoneyTrackerItem';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@expo/vector-icons/Ionicons';
 import { useGoCardless } from '../contexts/GoCardlessContext';
 import { deleteMoneyTrackerItemService, insertOrUpdateMoneyTrackerItem } from '../services/moneyTrackerService';
 import DeleteConfirmationModal from './DeleteConfirmationModal';

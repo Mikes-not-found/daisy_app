@@ -4,7 +4,7 @@ import { useTheme } from './ThemeContext';
 import { useUser } from '../auth/UserContext';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@expo/vector-icons/Ionicons';
 import { account } from '../App';
 
 // Definizione dei tipi

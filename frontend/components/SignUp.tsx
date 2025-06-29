@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { ID } from 'appwrite';
 import { account } from '../App';
 import { useTheme } from './ThemeContext';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@expo/vector-icons/Ionicons';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 type RootStackParamList = {

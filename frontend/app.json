@@ -1,4 +1,10 @@
 {
-  "name": "Daisy",
-  "displayName": "Daisy"
+  "expo": {
+    "name": "Daisy",
+    "slug": "Daisy",
+    "jsEngine": "jsc",
+    "plugins": [
+      "expo-localization"
+    ]
+  }
 }

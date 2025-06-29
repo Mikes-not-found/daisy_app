@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { View, ActivityIndicator, Text, TouchableOpacity, Image } from 'react-native';
 import Login from './components/Login';
 import Profiles from './components/Profiles';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@expo/vector-icons/Ionicons';
 import { UserProvider, useUser } from './auth/UserContext';
 import { useTheme, ThemeProvider } from './components/ThemeContext';
 import ThemeToggle from './components/ThemeToggle';

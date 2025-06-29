@@ -5,7 +5,7 @@ import { loginAndGetJWT } from '../auth/authUser';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useTheme } from './ThemeContext';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@expo/vector-icons/Ionicons';
 
 // Definizione dei tipi per la navigazione
 type RootStackParamList = {

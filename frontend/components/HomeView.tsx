@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useUser } from '../auth/UserContext'
 import { useTheme } from './ThemeContext'
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from '@expo/vector-icons/Ionicons';
 import { TouchableOpacity } from 'react-native'
 import { useGoCardless } from '../contexts/GoCardlessContext'
 import { BankCardDetails } from '../interfaces/profileInterfaces'
@@ -15,7 +15,7 @@ import { getCurrentMonthName } from '../utils/utils'
 
 const HomeView = () => {
   const [transactionsData, setTransactionsData] = useState<TransactionsData | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const { isDarkMode } = useTheme();
   const { userToken, user } = useUser();
@@ -78,9 +78,15 @@ const HomeView = () => {
 
 
   useEffect(() => {
-    getCurrentCardsBalance();
-    getListTransactionsData();
-    getListMoneyTrackerData();
+    Promise.all([
+      getCurrentCardsBalance(),
+      getListTransactionsData(),
+      getListMoneyTrackerData()
+    ])
+    .finally(() => {
+      setIsLoading(false);
+    })
+    
   }, [profileBankData, listTransactionData, listMoneyTracker])
 
   const getListMoneyTrackerData = () => {
@@ -122,6 +128,7 @@ const HomeView = () => {
     if (!userToken) {
       return;
     }
+    console.log("afasfasdf")
     setRefreshing(true);
     setIsLoading(true);
     try {
